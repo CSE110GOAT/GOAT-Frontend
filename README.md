@@ -1,2 +1,2 @@
 # G.O.A.T.
-Multiplatform UCSD Athletics Application using React Native
+iOS UCSD Athletics Application using React Native
