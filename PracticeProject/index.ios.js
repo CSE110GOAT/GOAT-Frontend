@@ -1,53 +1,80 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+'use strict';
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, Text, ScrollView, View, StyleSheet } from 'react-native';
 
-export default class PracticeProject extends Component {
+const Dimensions = require('Dimensions');
+const window = Dimensions.get('window');
+
+class HelloWorldApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <ScrollView>
+        <View style={styles.banner}>
+            <Text style={styles.banner_font}>Triton Athletics</Text>
+        </View>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+        </View>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+        </View>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+        </View>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+        </View>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon} />
+        </View>
+
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  banner: {
+    width: window.width,
+    height: 100,
+    backgroundColor: 'navy'
   },
-  welcome: {
-    fontSize: 20,
+
+  banner_font: {
+    fontSize: 40,
+    fontWeight: 'bold',
     textAlign: 'center',
-    margin: 10,
+    marginTop: 0,
+    paddingTop: 30,
+    paddingBottom: 30,
+    color: 'gold'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
+  sport_icon: {
+    width: window.width/3,
+    height: window.width/3,
+    backgroundColor: 'powderblue',
+    borderColor: 'black',
+    borderStyle: 'solid',
+    borderWidth: 0.5,
+    top: 7
+  }
 });
 
-AppRegistry.registerComponent('PracticeProject', () => PracticeProject);
+AppRegistry.registerComponent('PracticeProject', () => HelloWorldApp);
