@@ -15,31 +15,58 @@ class HelloWorldApp extends Component {
         </View>
 
         <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Baseball</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title, {left: 20}]}>Basketball</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title, {left: 8}]}>Cross Country</Text>
+          </View>
+
         </View>
 
         <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Fencing</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title, {left: 45}]}>Golf</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Rowing</Text>
+          </View>
         </View>
 
         <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title]}>Soccer</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title]}>Softball</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title, {left: 5, fontSize: 13}]}>Swimming & Diving</Text>
+          </View>
         </View>
 
         <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
-          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Tennis</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={[styles.sport_title, {left: 8}]}>Track & Field</Text>
+          </View>
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Volleyball</Text>
+          </View>
         </View>
 
         <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={styles.sport_icon} />
+          <View style={styles.sport_icon}>
+            <Text style={styles.sport_title}>Water Polo</Text>
+          </View>
           <View style={styles.sport_icon} />
           <View style={styles.sport_icon} />
         </View>
@@ -69,12 +96,20 @@ const styles = StyleSheet.create({
   sport_icon: {
     width: window.width/3,
     height: window.width/3,
-    backgroundColor: 'powderblue',
-    borderColor: 'black',
+    backgroundColor: 'white',
+    borderColor: 'grey',
     borderStyle: 'solid',
     borderWidth: 0.5,
-    top: 7
+    top: 7,
+  },
+
+  sport_title: {
+    paddingTop: 100,
+    fontFamily: 'Chalkboard SE',
+    fontSize: 18,
+    left: 30
   }
+
 });
 
 AppRegistry.registerComponent('PracticeProject', () => HelloWorldApp);
