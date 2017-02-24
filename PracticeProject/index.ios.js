@@ -1,7 +1,18 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { AppRegistry, Text, ScrollView, View, StyleSheet, Image } from 'react-native';
+import {
+  AppRegistry,
+  Text,
+  ScrollView,
+  View,
+  StyleSheet,
+  Image
+} from 'react-native';
+
+import Header from './Header';
+import SportIcon from './SportIcon';
+import NavBar from './NavBar';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -13,124 +24,77 @@ class HelloWorldApp extends Component {
         <ScrollView style={{
           marginBottom: window.width/4 - 45
         }}>
-          <View style={styles.banner}>
-              <Text style={styles.banner_font}>Triton Athletics</Text>
+
+          <View style={styles.head}>
+              <Header />
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/baseball.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Baseball</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/basketball.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Basketball</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/cross_country.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Cross Country</Text>
-            </View>
-
+            <SportIcon
+              pic={require('./sport_icons/baseball.png')}
+              sport='Baseball'
+            />
+            <SportIcon
+              pic={require('./sport_icons/basketball.png')}
+              sport='Basketball'
+            />
+            <SportIcon
+              pic={require('./sport_icons/cross_country.png')}
+              sport='Cross Country'
+            />
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/fencing.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Fencing</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/golf.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Golf</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/rowing.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Rowing</Text>
-            </View>
+            <SportIcon
+              pic={require('./sport_icons/fencing.png')}
+              sport='Fencing'
+            />
+            <SportIcon
+              pic={require('./sport_icons/golf.png')}
+              sport='Golf'
+            />
+            <SportIcon
+              pic={require('./sport_icons/rowing.png')}
+              sport='Rowing'
+            />
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/soccer.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={[styles.sport_title]}>Soccer</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/softball.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={[styles.sport_title]}>Softball</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/swimming.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={[styles.sport_title, {fontSize: 13}]}>Swimming & Diving</Text>
-            </View>
+            <SportIcon
+              pic={require('./sport_icons/soccer.png')}
+              sport='Soccer'
+            />
+            <SportIcon
+              pic={require('./sport_icons/softball.png')}
+              sport='Softball'
+            />
+            <SportIcon
+              pic={require('./sport_icons/swimming.png')}
+              sport='Swimming & Diving'
+            />
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/tennis.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Tennis</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-              source={require('./sport_icons/track.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Track & Field</Text>
-            </View>
-
-            <View style={styles.sport_icon}>
-              <Image
-                source={require('./sport_icons/volleyball.png')}
-                style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Volleyball</Text>
-
-            </View>
+            <SportIcon
+              pic={require('./sport_icons/tennis.png')}
+              sport='Tennis'
+            />
+            <SportIcon
+              pic={require('./sport_icons/track.png')}
+              sport='Track & Field'
+            />
+            <SportIcon
+              pic={require('./sport_icons/volleyball.png')}
+              sport='Volleyball'
+            />
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={[styles.sport_icon, {borderTopWidth: 0}]}>
-              <Image
-              source={require('./sport_icons/water_polo.png')}
-              style={styles.sport_pic}
-              />
-              <Text style={styles.sport_title}>Water Polo</Text>
-            </View>
+            <SportIcon
+              pic={require('./sport_icons/water_polo.png')}
+              sport='Water Polo'
+            />
+
             <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
             </View>
             <View style={styles.sport_icon, {borderTopWidth: 20}}>
@@ -138,61 +102,19 @@ class HelloWorldApp extends Component {
           </View>
         </ScrollView>
 
-        <View style={{
-          flex: 1,
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          alignItems: 'flex-end'
-        }}>
-          <View style={styles.home_icon}>
-            <Image
-            source={require('./home_bar_icons/home.png')}
-            style={styles.home_pic}
-            />
-          </View>
-
-          <View style={styles.home_icon}>
-            <Image
-            source={require('./home_bar_icons/magnifying_glass.png')}
-            style={styles.home_pic}
-            />
-          </View>
-
-          <View style={styles.home_icon}>
-            <Image
-            source={require('./home_bar_icons/social.png')}
-            style={styles.home_pic}
-            />
-          </View>
-
-          <View style={styles.home_icon}>
-            <Image
-            source={require('./home_bar_icons/news.png')}
-            style={styles.home_pic}
-            />
-          </View>
-        </View>
-
+        <NavBar />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  banner: {
+  head: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: window.width,
-    height: 100,
-    backgroundColor: 'navy'
-  },
-
-  banner_font: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 0,
-    paddingTop: 30,
-    paddingBottom: 30,
-    color: 'gold'
+    height: 80,
+    backgroundColor: '#00008b'
   },
 
   sport_icon: {
@@ -208,35 +130,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  sport_title: {
-    fontSize: 18,
-    textAlign: 'center',
-  },
-
-  sport_pic: {
-    width: window.width/3 - 50,
-    height: window.width/3 - 50,
-    alignSelf: 'center',
-  },
-
-  home_icon: {
-    width: window.width/4,
-    height: window.width/4 - 45,
-    backgroundColor: 'white',
-    borderColor: 'gainsboro',
-    borderTopWidth: 0.5,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderBottomWidth: 0,
-    justifyContent: 'center'
-  },
-
-  home_pic: {
-    width: window.width/4 - 60,
-    height: window.width/4 - 60,
-    alignSelf: 'center'
-  }
 });
 
 AppRegistry.registerComponent('PracticeProject', () => HelloWorldApp);
