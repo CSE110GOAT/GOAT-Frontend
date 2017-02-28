@@ -8,18 +8,19 @@ import {
   View,
   StyleSheet,
   Image,
-  Navigator,
+  Navigator
 
 } from 'react-native';
 
 import Header from './Header';
 import SportIcon from './SportIcon';
 import NavBar from './NavBar';
-import SportPage from './SportPage';
-import Explore from './Explore'
+import MenSports from './MenSports';
+import WomenSports from './WomenSports';
+import Explore from './Explore';
 
 
-class PracticeProject extends Component {
+export default class PracticeProject extends Component {
 
   render () {
     return (
@@ -31,13 +32,15 @@ class PracticeProject extends Component {
             case 'first':
               return (<Explore navigator = {navigator} title = "first" />);
             case 'second':
-              return (<SportPage navigator = {navigator} title = "second" />);
+              return (<MenSports navigator = {navigator} title = "second" />);
+            case 'third':
+              return (<WomenSports navigator = {navigator} title = "third" />);
+          }
         }
-      }
-      }
+        }
     />);
   }
-}
+};
 
 
 
