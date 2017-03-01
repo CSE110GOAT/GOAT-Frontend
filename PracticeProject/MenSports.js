@@ -9,32 +9,74 @@ import {
   StyleSheet,
   Image,
   Navigator,
+  TouchableHighlight,
+  TabBarIOS
 
 } from 'react-native';
+
 
 import Header from './Header';
 import SportIcon from './SportIcon';
 import NavBar from './NavBar';
 import Explore from './Explore';
 import WomenSports from './WomenSports';
+import BaseballPage from './BaseballPage';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 export default class MenSports extends Component {
+
+  navBaseball() {
+    this.props.navigator.push({
+      id: 'baseball'
+    })
+  }
+
+  navBack () {
+    this.props.navigator.pop({
+      id: 'explore'
+    })
+  }
 
   render () {
     return (
       <View style={{flex: 1}}>
+
       <View style={styles.head}>
-          <Header />
+        <Header />
       </View>
+
+      <View style = {styles.topBar}>
+      <TouchableHighlight onPress = {this.navBack.bind(this)}>
+        <Image
+          source = {require('./Back-50.png')}
+          style = {styles.pic}
+
+        />
+      </TouchableHighlight>
+
+          <View style = {styles.banner}>
+            <Text style = {styles.title}> MEN'S SPORTS </Text>
+          </View>
+
+        </View>
+
+
       <ScrollView>
           <View style={{flex: 1, flexDirection: 'row'}}>
+
+          <TouchableHighlight onPress = {this.navBaseball.bind(this)}>
+          <View>
             <SportIcon
               pic={require('./sport_icons/baseball.png')}
               sport='Baseball'
             />
+          </View>
+          </TouchableHighlight>
+
 
             <SportIcon
               pic={require('./sport_icons/basketball.png')}
@@ -113,6 +155,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#00008b'
   },
 
+  banner: {
+    width: 320,
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    marginTop: 8,
+    marginBottom: 8,
+    paddingRight: 60
+
+  },
+
   sport_icon: {
     width: window.width/3,
     height: window.width/3,
@@ -126,6 +179,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  topBar: {
+    flexDirection: 'row',
+    width: window.width,
+    borderWidth: 0.5,
+    borderColor: 'green',
+
+  },
+
+  title: {
+    justifyContent: 'center',
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 18,
+    marginLeft: 37
+
+  },
+
+  pic: {
+
+    width: 25,
+    height: 25,
+    marginTop: 5,
+    marginLeft: 10,
+    marginRight: 0
+
+
+  }
+
 });
 
 AppRegistry.registerComponent('MenSports', () => MenSports);

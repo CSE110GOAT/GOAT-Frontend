@@ -18,6 +18,7 @@ import NavBar from './NavBar';
 import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 import Explore from './Explore';
+import BaseballPage from './BaseballPage';
 
 
 export default class PracticeProject extends Component {
@@ -25,16 +26,18 @@ export default class PracticeProject extends Component {
   render () {
     return (
       <Navigator
-        initialRoute = {{id:'first'}}
+        initialRoute = {{id:'explore'}}
         renderScene = {(route, navigator) => {
           this._navigator = navigator;
           switch (route.id) {
-            case 'first':
-              return (<Explore navigator = {navigator} title = "first" />);
-            case 'second':
-              return (<MenSports navigator = {navigator} title = "second" />);
-            case 'third':
-              return (<WomenSports navigator = {navigator} title = "third" />);
+            case 'explore':
+              return (<Explore navigator = {navigator} title = "explore" />);
+            case 'men':
+              return (<MenSports navigator = {navigator} title = "men" />);
+            case 'women':
+              return (<WomenSports navigator = {navigator} title = "women" />);
+            case 'baseball':
+              return (<BaseballPage navigator = {navigator} title = "baseball" />);
           }
         }
         }

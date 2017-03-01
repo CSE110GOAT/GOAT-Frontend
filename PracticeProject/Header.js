@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#00008b'
   },
   title: {
-  justifyContent: 'center',
-  color: 'yellow',
-  fontSize: 35,
-  fontWeight: 'bold',
-  fontFamily: "Didot"
+    justifyContent: 'center',
+    color: 'yellow',
+    fontSize: 35,
+    fontWeight: 'bold',
+    fontFamily: "Didot"
   }
 });
 

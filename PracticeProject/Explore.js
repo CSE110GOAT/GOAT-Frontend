@@ -16,7 +16,6 @@ import NavBar from './NavBar';
 import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 
-
 export default class Explore extends Component {
 
   constructor() {
@@ -25,13 +24,13 @@ export default class Explore extends Component {
 
   navExploreMen() {
     this.props.navigator.push({
-      id: 'second'
+      id: 'men'
     })
   }
 
   navExploreWomen() {
     this.props.navigator.push({
-      id: 'third'
+      id: 'women'
     })
   }
 

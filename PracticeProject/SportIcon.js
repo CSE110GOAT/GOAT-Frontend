@@ -39,7 +39,7 @@ export default class SportIcon extends Component {
 const styles = StyleSheet.create({
   sport_icons: {
     width: window.width/3,
-    height: window.width/3 + 10,
+    height: window.width/3,
     backgroundColor: 'white',
     borderColor: 'blue',
     borderStyle: 'solid',
