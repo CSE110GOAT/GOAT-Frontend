@@ -45,7 +45,7 @@ export default class MenSports extends Component {
     return (
       <View style={{flex: 1}}>
 
-      <View style={styles.head}>
+      <View>
         <Header />
       </View>
 
@@ -147,13 +147,6 @@ export default class MenSports extends Component {
 };
 
 const styles = StyleSheet.create({
-  head: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: window.width,
-    height: 80,
-    backgroundColor: '#00008b'
-  },
 
   banner: {
     width: 320,

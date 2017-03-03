@@ -4,7 +4,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native'
 
 export default class Header extends Component{
@@ -17,28 +18,17 @@ export default class Header extends Component{
     render(){
     return (
       <View style = {styles.head}>
-        <Text style ={styles.title}>
-          {this.state.banner}
-        </Text>
+        <Image style ={styles.header_image}
+        source = {require('./header.png')}/>
       </View>
       );
     }
   }
 
 const styles = StyleSheet.create({
-  head: {
-    justifyContent: 'center',
-    alignItems: 'center',
+  header_image: {
     width: window.width,
-    height: 80,
-    backgroundColor: '#00008b'
-  },
-  title: {
-    justifyContent: 'center',
-    color: 'yellow',
-    fontSize: 35,
-    fontWeight: 'bold',
-    fontFamily: "Didot"
+    height: 95
   }
 });
 

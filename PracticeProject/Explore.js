@@ -38,7 +38,7 @@ export default class Explore extends Component {
     return(
       <View style = {{flex: 1}}>
 
-      <View style={styles.head}>
+      <View>
           <Header />
       </View>
 
@@ -67,14 +67,6 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-
-  head: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: window.width,
-    height: 80,
-    backgroundColor: '#00008b'
   },
 
   title: {

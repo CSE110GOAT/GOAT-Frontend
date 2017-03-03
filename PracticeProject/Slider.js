@@ -12,8 +12,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
+
+  indicator: {
+    backgroundColor: 'blue'
+  },
+
+  tab: {
+    opacity: 1,
+  },
+
+  tabbar: {
+    backgroundColor: 'green'
+  }
 });
 
 export default class Slider extends Component {
@@ -31,7 +43,11 @@ export default class Slider extends Component {
   };
 
   _renderHeader = (props) => {
-    return <TabBar {...props} />;
+    return <TabBar {...props}
+    style = {styles.tabbar}
+    indicatorStyle = {styles.indicator}
+    tabStyle = {styles.tab}
+    />;
   };
 
   _renderScene = ({ route }) => {
@@ -61,6 +77,7 @@ export default class Slider extends Component {
         renderScene={this._renderScene}
         renderHeader={this._renderHeader}
         onRequestChangeTab={this._handleChangeTab}
+
       />
     );
   }
