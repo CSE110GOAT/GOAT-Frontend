@@ -16,7 +16,9 @@ import SportIcon from './SportIcon';
 import NavBar from './NavBar';
 import MenSports from './MenSports';
 import WomenSports from './WomenSports';
+import SportTabBar from './SportTabBar';
 import Slider from './Slider.js';
+import BaseballRoster from './BaseballRoster';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -26,37 +28,17 @@ export default class BaseballPage extends Component {
     super()
   }
 
-  navBack () {
-    this.props.navigator.pop({
-      id: 'men'
-    })
-  }
-
   render() {
     return(
       <View style = {{flex:1}}>
 
-      <View style = {styles.topBar}>
-          <TabBarIOS
-            barTintColor = "white"
-            tintColor = "black"
-            unselectedItemTintColor = "black"
-            translucent = {true}
+        <SportTabBar
+          sport = "Baseball"
+          previous = "men"
+          page = {this}
+        />
 
-            >
-
-            <Icon.TabBarItemIOS
-              iconName = "ios-arrow-back-outline"
-              selectedIconName = "ios-arrow-back"
-              onPress = {this.navBack.bind(this)}
-              />
-            </TabBarIOS>
-            <View style = {styles.head}>
-              <Text style = {styles.title}> BASEBALL </Text>
-            </View>
-        </View>
-
-        <Slider />
+        <Slider games = "hi" roster = {<BaseballRoster/>} stats = "hope this works" />
 
       </View>
 
@@ -65,29 +47,6 @@ export default class BaseballPage extends Component {
 };
 
 const styles = StyleSheet.create({
-  head: {
-    width: 320,
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    flexDirection: 'column',
-    marginTop: 20,
-    marginBottom: 8,
-    paddingRight: 45
-
-  },
-
-  title: {
-    justifyContent: 'center',
-    textAlign: 'center',
-    color: 'black',
-    fontSize: 25,
-
-  },
-
-  topBar: {
-    flexDirection: 'row',
-    width: window.width,
-  }
 
 });
 

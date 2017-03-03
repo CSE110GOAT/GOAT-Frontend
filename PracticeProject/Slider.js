@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, AppRegistry } from 'react-native';
+import { View, StyleSheet, Text, AppRegistry } from 'react-native';
 import { TabViewAnimated, TabBar } from 'react-native-tab-view';
+
+import BaseballRoster from './BaseballRoster';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,11 +37,17 @@ export default class Slider extends Component {
   _renderScene = ({ route }) => {
     switch (route.key) {
     case '1':
-      return <View style={styles.page} />;
+      return <View style={styles.page} >
+          <Text>{this.props.games}</Text>
+        </View>;
     case '2':
-      return <View style={styles.page} />;
+      return <View style={styles.page} >
+          {this.props.roster}
+        </View>;
     case '3':
-      return <View style={styles.page} />;
+      return <View style={styles.page} >
+        <Text>{this.props.stats}</Text>
+        </View>
     default:
       return null;
     }
