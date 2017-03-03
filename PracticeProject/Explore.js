@@ -7,7 +7,8 @@ import {
   ScrollView,
   Image,
   TouchableHighlight,
-  Navigator
+  Navigator,
+  Dimensions
 } from 'react-native';
 
 import Header from './Header';
@@ -16,8 +17,9 @@ import NavBar from './NavBar';
 import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 
-export default class Explore extends Component {
+var window = Dimensions.get('window');
 
+export default class Explore extends Component {
   constructor() {
     super()
   }
@@ -38,20 +40,31 @@ export default class Explore extends Component {
     return(
       <View style = {{flex: 1}}>
 
-      <View>
-          <Header />
+        <View>
+            <Header />
+        </View>
+
+        <TouchableHighlight style = {styles.button} onPress = {this.navExploreMen.bind(this)}>
+            <Image
+              source={require('./explore_pics/baseball.png')}
+              style = {{
+                height: 286,
+                width: window.width
+              }}
+            />
+        </TouchableHighlight>
+
+        <TouchableHighlight style = {styles.button}  onPress = {this.navExploreWomen.bind(this)}>
+          <Image
+            source={require('./explore_pics/tennis.png')}
+            style = {{
+              height: 286,
+              width: window.width
+            }}
+          />
+        </TouchableHighlight>
+
       </View>
-
-      <TouchableHighlight style = {styles.button} onPress = {this.navExploreMen.bind(this)}>
-          <Text style = {styles.title}> Men's Sports </Text>
-      </TouchableHighlight>
-
-      <TouchableHighlight style = {styles.button}  onPress = {this.navExploreWomen.bind(this)}>
-          <Text style = {styles.title}> Women's Sports </Text>
-      </TouchableHighlight>
-
-      </View>
-
     );
   }
 };
@@ -60,7 +73,7 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     width: window.width,
-    height: window.height,
+    height: window.width,
     backgroundColor: 'white',
     borderColor: 'gainsboro',
     borderStyle: 'solid',

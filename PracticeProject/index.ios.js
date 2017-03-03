@@ -8,8 +8,7 @@ import {
   View,
   StyleSheet,
   Image,
-  Navigator
-
+  Navigator,
 } from 'react-native';
 
 import Header from './Header';
@@ -19,7 +18,6 @@ import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 import Explore from './Explore';
 import BaseballPage from './BaseballPage';
-
 
 export default class PracticeProject extends Component {
 
@@ -44,7 +42,5 @@ export default class PracticeProject extends Component {
     />);
   }
 };
-
-
 
 AppRegistry.registerComponent('PracticeProject', () => PracticeProject);
