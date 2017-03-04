@@ -36,6 +36,8 @@ export default class PracticeProject extends Component {
               return (<WomenSports navigator = {navigator} title = "women" />);
             case 'baseball':
               return (<BaseballPage navigator = {navigator} title = "baseball" />);
+            case 'MBasketball':
+              return (<MenBasketball navigator = {navigator} title = "MBasketball" />);
           }
         }
         }
