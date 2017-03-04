@@ -24,6 +24,12 @@ const window = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class WomenSports extends Component {
+  navBasketball() {
+    this.props.navigator.push({
+      id: 'WBasketball'
+    })
+  }
+
   navBack () {
     this.props.navigator.pop({
       id: 'explore'
