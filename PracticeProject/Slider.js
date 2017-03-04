@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
 
   indicator: {
-    backgroundColor: 'blue'
+    backgroundColor: 'gold'
   },
 
   tab: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
 
   tabbar: {
-    backgroundColor: 'green'
+    backgroundColor: 'navy'
   }
 });
 

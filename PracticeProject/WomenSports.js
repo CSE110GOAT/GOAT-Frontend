@@ -9,7 +9,8 @@ import {
   StyleSheet,
   Image,
   Navigator,
-
+  TouchableHighlight,
+  TabBarIOS
 } from 'react-native';
 
 import Header from './Header';
@@ -20,20 +21,37 @@ import Explore from './Explore';
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 export default class WomenSports extends Component {
+  navBack () {
+    this.props.navigator.pop({
+      id: 'explore'
+    })
+  }
 
   render () {
     return (
       <View style={{flex: 1}}>
 
-      <View style={styles.head}>
-          <Header />
-      </View>
+        <View>
+            <Header />
+        </View>
 
-        <ScrollView style={{
-          marginBottom: window.width/4 - 45
-        }}>
+        <View style = {styles.topBar}>
+          <TouchableHighlight onPress = {this.navBack.bind(this)}>
+            <Image
+              source = {require('./Back-50.png')}
+              style = {styles.pic}
+            />
+          </TouchableHighlight>
 
+          <View style = {styles.banner}>
+            <Text style = {styles.title}> WOMEN'S SPORTS </Text>
+          </View>
+        </View>
+
+        <ScrollView>
           <View style={{flex: 1, flexDirection: 'row'}}>
             <SportIcon
               pic={require('./sport_icons/basketball.png')}
@@ -43,40 +61,32 @@ export default class WomenSports extends Component {
               pic={require('./sport_icons/cross_country.png')}
               sport='Cross Country'
             />
-
             <SportIcon
               pic={require('./sport_icons/fencing.png')}
               sport='Fencing'
             />
-
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-
             <SportIcon
               pic={require('./sport_icons/rowing.png')}
               sport='Rowing'
             />
-
             <SportIcon
               pic={require('./sport_icons/soccer.png')}
               sport='Soccer'
             />
-
             <SportIcon
               pic={require('./sport_icons/softball.png')}
               sport='Softball'
             />
-
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-
             <SportIcon
               pic={require('./sport_icons/swimming.png')}
               sport='Swimming & Diving'
             />
-
             <SportIcon
               pic={require('./sport_icons/tennis.png')}
               sport='Tennis'
@@ -85,41 +95,38 @@ export default class WomenSports extends Component {
               pic={require('./sport_icons/track.png')}
               sport='Track & Field'
             />
-
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
-
             <SportIcon
               pic={require('./sport_icons/volleyball.png')}
               sport='Volleyball'
             />
-
             <SportIcon
               pic={require('./sport_icons/water_polo.png')}
               sport='Water Polo'
             />
-
             <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
             </View>
           </View>
-
         </ScrollView>
 
         <NavBar />
       </View>
-
     );
   }
 };
 
 const styles = StyleSheet.create({
-  head: {
+  banner: {
+    width: 320,
     justifyContent: 'center',
-    alignItems: 'center',
-    width: window.width,
-    height: 80,
-    backgroundColor: '#00008b'
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    marginTop: 8,
+    marginBottom: 8,
+    paddingRight: 60
+
   },
 
   sport_icon: {
@@ -135,6 +142,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  topBar: {
+    flexDirection: 'row',
+    width: window.width,
+    borderWidth: 0.5,
+    borderColor: 'green',
+  },
+
+  title: {
+    justifyContent: 'center',
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 18,
+    marginLeft: 37
+  },
+
+  pic: {
+    width: 25,
+    height: 25,
+    marginTop: 5,
+    marginLeft: 10,
+    marginRight: 0
+  }
 });
 
 AppRegistry.registerComponent('WomenSports', () => WomenSports);
