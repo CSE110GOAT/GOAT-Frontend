@@ -59,10 +59,14 @@ export default class WomenSports extends Component {
 
         <ScrollView>
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <SportIcon
-              pic={require('./sport_icons/basketball.png')}
-              sport='Basketball'
-            />
+            <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
+              <View>
+                <SportIcon
+                  pic={require('./sport_icons/basketball.png')}
+                  sport='Basketball'
+                />
+              </View>
+            </TouchableHighlight>
             <SportIcon
               pic={require('./sport_icons/cross_country.png')}
               sport='Cross Country'
