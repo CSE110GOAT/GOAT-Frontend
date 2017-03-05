@@ -11,12 +11,10 @@ import {
   TabBarIOS
 } from 'react-native';
 
-import Header from '../Header';
-import SportIcon from '../SportIcon';
 import NavBar from '../NavBar';
 import SportTabBar from '../SportTabBar';
 import Slider from '../Slider.js';
-import BaseballRoster from '../BaseballRoster';
+import WBasketballRoster from './WRosters/WBasketballRoster';
 
 export default class WomenBasketball extends Component {
   constructor() {
@@ -35,7 +33,7 @@ export default class WomenBasketball extends Component {
 
         <Slider
           games = "Games will go here"
-          roster = {<BaseballRoster/>}
+          roster = {<WBasketballRoster/>}
           stats = "Stats will go here"
         />
 

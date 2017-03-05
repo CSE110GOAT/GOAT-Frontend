@@ -19,7 +19,6 @@ import WomenSports from './WomenSports';
 import Explore from './Explore';
 import BaseballPage from './BaseballPage';
 import WomenBasketball from './WSportPages/WomenBasketball';
-import MenBasketball from './MenBasketball';
 
 export default class PracticeProject extends Component {
 
