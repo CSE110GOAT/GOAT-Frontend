@@ -20,7 +20,7 @@ import SportIcon from './SportIcon';
 import NavBar from './NavBar';
 import Explore from './Explore';
 import WomenSports from './WomenSports';
-import BaseballPage from './BaseballPage';
+import BaseballPage from './MSportsPages/BaseballPage';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
