@@ -14,9 +14,9 @@ import {
 import NavBar from '../NavBar';
 import SportTabBar from '../SportTabBar';
 import Slider from '../Slider.js';
-import WXCRoster from './WRosters/WXCRoster'
+import WRowingRoster from './WRosters/WRowingRoster'
 
-export default class WomenXC extends Component {
+export default class WomenRowing extends Component {
   constructor() {
     super();
   }
@@ -26,14 +26,14 @@ export default class WomenXC extends Component {
       <View style = {{flex: 1}}>
 
         <SportTabBar
-          sport = "Cross Country"
+          sport = "Rowing"
           previous = "women"
           page = {this}
         />
 
         <Slider
           games = "Games will go here"
-          roster = {<WXCRoster/>}
+          roster = {<WRowingRoster/>}
           stats = "Stats will go here"
         />
 
@@ -42,4 +42,4 @@ export default class WomenXC extends Component {
   }
 }
 
-AppRegistry.registerComponent('WomenXC', () => WomenXC);
+AppRegistry.registerComponent('WomenRowing', () => WomenRowing);
