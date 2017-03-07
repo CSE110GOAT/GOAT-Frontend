@@ -24,6 +24,7 @@ import BaseballPage from './MSportPages/BaseballPage';
 import MenBasketball from './MSportPages/MenBasketball';
 import MenXC from './MSportPages/MenXC';
 import MenFencing from './MSportPages/MenFencing';
+import Golf from './MSportPages/Golf';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -53,6 +54,12 @@ export default class MenSports extends Component {
   navFencing() {
     this.props.navigator.push({
       id: 'MFencing'
+    })
+  }
+
+  navGolf() {
+    this.props.navigator.push({
+      id: 'Golf'
     })
   }
 
@@ -128,10 +135,15 @@ export default class MenSports extends Component {
             </View>
           </TouchableHighlight>
 
-            <SportIcon
-              pic={require('./sport_icons/golf.png')}
-              sport='Golf'
-            />
+          <TouchableHighlight onPress = {this.navGolf.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/golf.png')}
+                sport='Golf'
+              />
+            </View>
+          </TouchableHighlight>
+          
             <SportIcon
               pic={require('./sport_icons/rowing.png')}
               sport='Rowing'

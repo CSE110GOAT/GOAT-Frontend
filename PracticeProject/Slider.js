@@ -6,6 +6,7 @@ import BaseballRoster from './MSportPages/BaseballRoster';
 import MBasketballRoster from './MSportPages/MBasketballRoster';
 import MenXC from './MSportPages/MXCRoster';
 import MenFencing from './MSportPages/MenFencing';
+import Golf from './MSportPages/Golf';
 
 const styles = StyleSheet.create({
   container: {
