@@ -18,11 +18,11 @@ import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 import SportTabBar from './SportTabBar';
 import Slider from './Slider.js';
-import BaseballRoster from './MSportsPages/BaseballRoster';
+import MBasketballRoster from './MSportsPages/MBasketballRoster';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export default class BaseballPage extends Component {
+export default class MenBasketball extends Component {
 
   constructor() {
     super()
@@ -33,12 +33,12 @@ export default class BaseballPage extends Component {
       <View style = {{flex:1}}>
 
         <SportTabBar
-          sport = "Baseball"
+          sport = "Basketball"
           previous = "men"
           page = {this}
         />
 
-        <Slider games = "hi" roster = {<BaseballRoster/>} stats = "hope this works" />
+        <Slider games = "hi" roster = {<MBasketballRoster/>} stats = "hope this works" />
 
       </View>
 
@@ -46,4 +46,5 @@ export default class BaseballPage extends Component {
   }
 };
 
-AppRegistry.registerComponent('BaseballPage', () => BaseballPage);
+
+AppRegistry.registerComponent('MBasketball', () => MBasketball);
