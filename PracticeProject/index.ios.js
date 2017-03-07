@@ -26,12 +26,13 @@ import Golf from './MSportPages/Golf';
 import MenRowing from './MSportPages/MenRowing';
 import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
+import MenTennis from './MSportPages/MenTennis';
 
 import WomenBasketball from './WSportPages/WomenBasketball';
 import WomenXC from './WSportPages/WomenXC';
 import WomenFencing from './WSportPages/WomenFencing';
 import WomenRowing from './WSportPages/WomenRowing';
-import WomenSoccer from './WSportPages/WomenSoccer';
+//import WomenSoccer from './WSportPages/WomenSoccer';
 
 
 export default class PracticeProject extends Component {
@@ -66,6 +67,8 @@ export default class PracticeProject extends Component {
               return (<MenSoccer navigator = {navigator} title = "MSoccer" />);
             case 'MSD':
               return (<MenSD navigator = {navigator} title = "MSD" />);
+            case 'MTennis':
+              return (<MenTennis navigator = {navigator} title = "MTennis" />);
 
             case 'WBasketball':
               return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);
@@ -75,8 +78,8 @@ export default class PracticeProject extends Component {
               return (<WomenFencing navigator = {navigator} title = "WFencing" />);
             case 'WRowing':
               return (<WomenRowing navigator = {navigator} title = "WRowing" />);
-            case 'WSoccer':
-              return (<WomenSoccer navigator = {navigator} title = "WSoccer" />);
+            //case 'WSoccer':
+              //return (<WomenSoccer navigator = {navigator} title = "WSoccer" />);
           }
         }}
     />);

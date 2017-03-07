@@ -10,6 +10,7 @@ import Golf from './MSportPages/Golf';
 import MenRowing from './MSportPages/MenRowing';
 import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
+import MenTennis from './MSportPages/MenTennis';
 
 const styles = StyleSheet.create({
   container: {
