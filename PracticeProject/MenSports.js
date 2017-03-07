@@ -21,6 +21,7 @@ import NavBar from './NavBar';
 import Explore from './Explore';
 import WomenSports from './WomenSports';
 import BaseballPage from './MSportsPages/BaseballPage';
+import MenBasketball from './MSportsPages/MenBasketball';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -32,6 +33,12 @@ export default class MenSports extends Component {
   navBaseball() {
     this.props.navigator.push({
       id: 'baseball'
+    })
+  }
+
+  navBasketball() {
+    this.props.navigator.push({
+      id: 'MBasketball'
     })
   }
 
@@ -69,19 +76,23 @@ export default class MenSports extends Component {
           <View style={{flex: 1, flexDirection: 'row'}}>
 
           <TouchableHighlight onPress = {this.navBaseball.bind(this)}>
-          <View>
-            <SportIcon
-              pic={require('./sport_icons/baseball.png')}
-              sport='Baseball'
-            />
-          </View>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/baseball.png')}
+                sport='Baseball'
+              />
+            </View>
           </TouchableHighlight>
 
-
-            <SportIcon
-              pic={require('./sport_icons/basketball.png')}
-              sport='Basketball'
-            />
+            <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
+              <View>
+                <SportIcon
+                  pic={require('./sport_icons/basketball.png')}
+                  sport='Basketball'
+                />
+              </View>
+            </TouchableHighlight>
+            
             <SportIcon
               pic={require('./sport_icons/cross_country.png')}
               sport='Cross Country'
