@@ -29,6 +29,7 @@ import MenRowing from './MSportPages/MenRowing';
 import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
 import MenTennis from './MSportPages/MenTennis';
+import MenTF from './MSportPages/MenTF';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -88,6 +89,12 @@ export default class MenSports extends Component {
   navTennis() {
     this.props.navigator.push({
       id: 'MTennis'
+    })
+  }
+
+  navTF() {
+    this.props.navigator.push({
+      id: 'MTF'
     })
   }
 
@@ -214,10 +221,14 @@ export default class MenSports extends Component {
 
           <View style={{flex: 1, flexDirection: 'row'}}>
 
-            <SportIcon
-              pic={require('./sport_icons/track.png')}
-              sport='Track & Field'
-            />
+          <TouchableHighlight onPress = {this.navTF.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/track.png')}
+                sport='Track & Field'
+              />
+            </View>
+          </TouchableHighlight>
             <SportIcon
               pic={require('./sport_icons/volleyball.png')}
               sport='Volleyball'

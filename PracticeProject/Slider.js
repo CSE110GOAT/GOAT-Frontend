@@ -11,6 +11,7 @@ import MenRowing from './MSportPages/MenRowing';
 import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
 import MenTennis from './MSportPages/MenTennis';
+import MenTF from './MSportPages/MenTF';
 
 const styles = StyleSheet.create({
   container: {
