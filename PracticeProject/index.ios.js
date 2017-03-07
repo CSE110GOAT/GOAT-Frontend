@@ -31,6 +31,7 @@ import WomenBasketball from './WSportPages/WomenBasketball';
 import WomenXC from './WSportPages/WomenXC';
 import WomenFencing from './WSportPages/WomenFencing';
 import WomenRowing from './WSportPages/WomenRowing';
+import WomenSoccer from './WSportPages/WomenSoccer';
 
 
 export default class PracticeProject extends Component {
@@ -74,6 +75,8 @@ export default class PracticeProject extends Component {
               return (<WomenFencing navigator = {navigator} title = "WFencing" />);
             case 'WRowing':
               return (<WomenRowing navigator = {navigator} title = "WRowing" />);
+            case 'WSoccer':
+              return (<WomenSoccer navigator = {navigator} title = "WSoccer" />);
           }
         }}
     />);
