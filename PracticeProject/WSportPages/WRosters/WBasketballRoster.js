@@ -21,7 +21,7 @@ export default class WBasketballRoster extends Component {
 
           <View style = {[styles.roster_row, {borderTopWidth: 0.5}]}>
             <TouchableHighlight>
-              <View>
+              <View style = {styles.begin_row}>
                 <RosterIcon />
               </View>
             </TouchableHighlight>
@@ -41,7 +41,7 @@ export default class WBasketballRoster extends Component {
 
           <View style = {styles.roster_row}>
             <TouchableHighlight>
-              <View>
+              <View style = {styles.begin_row}>
                 <RosterIcon />
               </View>
             </TouchableHighlight>
@@ -74,9 +74,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 
+  begin_row: {
+    borderRightWidth: 0
+  },
+
   end_of_row: {
-    borderRightWidth: 0.5
-  }
+    borderLeftWidth: 0
+  },
 });
 
 AppRegistry.registerComponent('WBasketballRoster', () => WBasketballRoster);

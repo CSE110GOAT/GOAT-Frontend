@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     width: window.width/3,
     height: window.width/3,
     backgroundColor: 'white',
-    borderColor: 'blue',
+    borderColor: 'gainsboro',
     borderStyle: 'solid',
     borderWidth: 0.5,
     borderRightWidth: 0,

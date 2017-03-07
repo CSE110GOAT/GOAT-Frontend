@@ -37,8 +37,9 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderStyle: 'solid',
     borderWidth: 0.5,
-    borderRightWidth: 0,
+    borderRightWidth: 0.5,
     borderTopWidth: 0,
+    borderLeftWidth: 0.5,
   },
 
   player: {

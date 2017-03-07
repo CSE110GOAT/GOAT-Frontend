@@ -53,7 +53,7 @@ export default class WomenSports extends Component {
           </TouchableHighlight>
 
           <View style = {styles.banner}>
-            <Text style = {styles.title}> WOMEN'S SPORTS </Text>
+            <Text style = {styles.title}> WOMENS SPORTS </Text>
           </View>
         </View>
 
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: window.width,
     borderWidth: 0.5,
-    borderColor: 'green',
+    borderColor: 'gainsboro',
   },
 
   title: {
