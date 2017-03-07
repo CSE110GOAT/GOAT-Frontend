@@ -21,6 +21,7 @@ import BaseballPage from './MSportPages/BaseballPage';
 import WomenBasketball from './WSportPages/WomenBasketball';
 import MenBasketball from './MSportPages/MenBasketball';
 import MenXC from './MSportPages/MenXC';
+import MenFencing from './MSportPages/MenFencing';
 
 export default class PracticeProject extends Component {
 
@@ -45,6 +46,8 @@ export default class PracticeProject extends Component {
               return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);
             case 'MenXC':
               return (<MenXC navigator = {navigator} title = "MenXC" />);
+            case 'MFencing':
+              return (<MenFencing navigator = {navigator} title = "MFencing" />);
           }
         }
         }

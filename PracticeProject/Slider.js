@@ -5,6 +5,7 @@ import { TabViewAnimated, TabBar } from 'react-native-tab-view';
 import BaseballRoster from './MSportPages/BaseballRoster';
 import MBasketballRoster from './MSportPages/MBasketballRoster';
 import MenXC from './MSportPages/MXCRoster';
+import MenFencing from './MSportPages/MenFencing';
 
 const styles = StyleSheet.create({
   container: {
