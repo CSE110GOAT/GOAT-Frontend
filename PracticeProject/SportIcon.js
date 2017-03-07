@@ -26,8 +26,8 @@ export default class SportIcon extends Component {
     return(
         <View style={styles.sport_icons}>
           <Image
-          source={this.props.pic}
-          style={styles.sport_pic}
+            source={this.props.pic}
+            style={styles.sport_pic}
           />
           <Text style={styles.sport_title}
           adjustsFontSizeToFit={this.state.fitFont}>{this.props.sport}</Text>
