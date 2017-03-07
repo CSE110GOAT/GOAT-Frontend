@@ -20,8 +20,8 @@ import SportIcon from './SportIcon';
 import NavBar from './NavBar';
 import Explore from './Explore';
 import WomenSports from './WomenSports';
-import BaseballPage from './MSportsPages/BaseballPage';
-import MenBasketball from './MSportsPages/MenBasketball';
+import BaseballPage from './MSportPages/BaseballPage';
+import MenBasketball from './MSportPages/MenBasketball';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -92,7 +92,7 @@ export default class MenSports extends Component {
                 />
               </View>
             </TouchableHighlight>
-            
+
             <SportIcon
               pic={require('./sport_icons/cross_country.png')}
               sport='Cross Country'

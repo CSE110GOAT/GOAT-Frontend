@@ -11,14 +11,14 @@ import {
   TabBarIOS
 } from 'react-native';
 
-import Header from './Header';
-import SportIcon from './SportIcon';
-import NavBar from './NavBar';
-import MenSports from './MenSports';
-import WomenSports from './WomenSports';
-import Slider from './Slider.js';
-import MenBasketball from './MSportsPages/MenBasketball.js';
-import RosterIcon from './RosterIcon.js';
+import Header from '../Header';
+import SportIcon from '../SportIcon';
+import NavBar from '../NavBar';
+import MenSports from '../MenSports';
+import WomenSports from '../WomenSports';
+import Slider from '../Slider.js';
+import MenBasketball from './MenBasketball.js';
+import RosterIcon from '../RosterIcon.js';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');

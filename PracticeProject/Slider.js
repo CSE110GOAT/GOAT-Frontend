@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, AppRegistry } from 'react-native';
 import { TabViewAnimated, TabBar } from 'react-native-tab-view';
 
-import BaseballRoster from './BaseballRoster';
+import BaseballRoster from './MSportPages/BaseballRoster';
+import MBasketballRoster from './MSportPages/MBasketballRoster';
 
 const styles = StyleSheet.create({
   container: {
