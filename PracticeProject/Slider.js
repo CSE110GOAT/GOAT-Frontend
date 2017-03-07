@@ -9,6 +9,7 @@ import MenFencing from './MSportPages/MenFencing';
 import Golf from './MSportPages/Golf';
 import MenRowing from './MSportPages/MenRowing';
 import MenSoccer from './MSportPages/MenSoccer';
+import MenSD from './MSportPages/MenSD';
 
 const styles = StyleSheet.create({
   container: {
