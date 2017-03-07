@@ -30,6 +30,12 @@ export default class WomenSports extends Component {
     })
   }
 
+  navWomenXC() {
+    this.props.navigator.push({
+      id: 'WomenXC'
+    })
+  }
+
   navBack () {
     this.props.navigator.pop({
       id: 'explore'
@@ -57,8 +63,8 @@ export default class WomenSports extends Component {
           </View>
         </View>
 
-        <ScrollView>
-          <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style = {{flex: 1}}>
+          <View style = {{flexDirection: 'row'}}>
             <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
               <View>
                 <SportIcon
@@ -67,17 +73,23 @@ export default class WomenSports extends Component {
                 />
               </View>
             </TouchableHighlight>
-            <SportIcon
-              pic={require('./sport_icons/cross_country.png')}
-              sport='Cross Country'
-            />
+
+            <TouchableHighlight onPress = {this.navWomenXC.bind(this)}>
+              <View>
+                <SportIcon
+                  pic={require('./sport_icons/cross_country.png')}
+                  sport='Cross Country'
+                />
+              </View>
+            </TouchableHighlight>
+
             <SportIcon
               pic={require('./sport_icons/fencing.png')}
               sport='Fencing'
             />
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style = {{flexDirection: 'row'}}>
             <SportIcon
               pic={require('./sport_icons/rowing.png')}
               sport='Rowing'
@@ -92,7 +104,7 @@ export default class WomenSports extends Component {
             />
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style = {{flexDirection: 'row'}}>
             <SportIcon
               pic={require('./sport_icons/swimming.png')}
               sport='Swimming & Diving'
@@ -107,7 +119,7 @@ export default class WomenSports extends Component {
             />
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style = {{flexDirection: 'row'}}>
             <SportIcon
               pic={require('./sport_icons/volleyball.png')}
               sport='Volleyball'
@@ -119,7 +131,7 @@ export default class WomenSports extends Component {
             <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
             </View>
           </View>
-        </ScrollView>
+        </View>
 
         <NavBar />
       </View>

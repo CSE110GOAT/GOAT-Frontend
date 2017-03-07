@@ -17,11 +17,15 @@ import NavBar from './NavBar';
 import MenSports from './MenSports';
 import WomenSports from './WomenSports';
 import Explore from './Explore';
+
 import BaseballPage from './MSportPages/BaseballPage';
-import WomenBasketball from './WSportPages/WomenBasketball';
 import MenBasketball from './MSportPages/MenBasketball';
 import MenXC from './MSportPages/MenXC';
 import MenFencing from './MSportPages/MenFencing';
+
+import WomenBasketball from './WSportPages/WomenBasketball';
+import WomenXC from './WSportPages/WomenXC';
+
 
 export default class PracticeProject extends Component {
 
@@ -38,16 +42,20 @@ export default class PracticeProject extends Component {
               return (<MenSports navigator = {navigator} title = "men" />);
             case 'women':
               return (<WomenSports navigator = {navigator} title = "women" />);
+
             case 'baseball':
               return (<BaseballPage navigator = {navigator} title = "baseball" />);
             case 'MBasketball':
               return (<MenBasketball navigator = {navigator} title = "MBasketball" />);
-            case 'WBasketball':
-              return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);
             case 'MenXC':
               return (<MenXC navigator = {navigator} title = "MenXC" />);
             case 'MFencing':
               return (<MenFencing navigator = {navigator} title = "MFencing" />);
+
+            case 'WBasketball':
+              return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);
+            case 'WomenXC':
+              return (<WomenXC navigator = {navigator} title = "WomenXC" />);
           }
         }
         }
