@@ -48,6 +48,18 @@ export default class WomenSports extends Component {
     })
   }
 
+  navWomenSoccer() {
+    this.props.navigator.push({
+      id: 'WSoccer'
+    })
+  }
+
+  navSoftball() {
+    this.props.navigator.push({
+      id: 'Softball'
+    })
+  }
+
   navBack () {
     this.props.navigator.pop({
       id: 'explore'
@@ -114,15 +126,24 @@ export default class WomenSports extends Component {
                 />
               </View>
             </TouchableHighlight>
-            
-            <SportIcon
-              pic={require('./sport_icons/soccer.png')}
-              sport='Soccer'
-            />
-            <SportIcon
-              pic={require('./sport_icons/softball.png')}
-              sport='Softball'
-            />
+
+            <TouchableHighlight onPress = {this.navWomenSoccer.bind(this)}>
+              <View>
+                <SportIcon
+                  pic={require('./sport_icons/soccer.png')}
+                  sport='Soccer'
+                />
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress = {this.navSoftball.bind(this)}>
+              <View>
+                <SportIcon
+                  pic={require('./sport_icons/softball.png')}
+                  sport='Softball'
+                />
+              </View>
+            </TouchableHighlight>
           </View>
 
           <View style = {{flexDirection: 'row'}}>
