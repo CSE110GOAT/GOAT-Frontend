@@ -8,6 +8,7 @@ import MenXC from './MSportPages/MXCRoster';
 import MenFencing from './MSportPages/MenFencing';
 import Golf from './MSportPages/Golf';
 import MenRowing from './MSportPages/MenRowing';
+import MenSoccer from './MSportPages/MenSoccer';
 
 const styles = StyleSheet.create({
   container: {
