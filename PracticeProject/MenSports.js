@@ -25,6 +25,7 @@ import MenBasketball from './MSportPages/MenBasketball';
 import MenXC from './MSportPages/MenXC';
 import MenFencing from './MSportPages/MenFencing';
 import Golf from './MSportPages/Golf';
+import MenRowing from './MSportPages/MenRowing';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -60,6 +61,12 @@ export default class MenSports extends Component {
   navGolf() {
     this.props.navigator.push({
       id: 'Golf'
+    })
+  }
+
+  navRowing() {
+    this.props.navigator.push({
+      id: 'MRowing'
     })
   }
 
@@ -143,11 +150,15 @@ export default class MenSports extends Component {
               />
             </View>
           </TouchableHighlight>
-          
-            <SportIcon
-              pic={require('./sport_icons/rowing.png')}
-              sport='Rowing'
-            />
+
+          <TouchableHighlight onPress = {this.navRowing.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/rowing.png')}
+                sport='Rowing'
+              />
+            </View>
+          </TouchableHighlight>
           </View>
 
           <View style={{flex: 1, flexDirection: 'row'}}>
