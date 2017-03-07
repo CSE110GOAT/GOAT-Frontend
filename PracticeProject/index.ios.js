@@ -28,6 +28,8 @@ import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
 import MenTennis from './MSportPages/MenTennis';
 import MenTF from './MSportPages/MenTF';
+import MenVolleyball from './MSportPages/MenVolleyball';
+import MenWP from './MSportPages/MenWP';
 
 import WomenBasketball from './WSportPages/WomenBasketball';
 import WomenXC from './WSportPages/WomenXC';
@@ -73,6 +75,10 @@ export default class PracticeProject extends Component {
               return (<MenTennis navigator = {navigator} title = "MTennis" />);
             case 'MTF':
               return (<MenTF navigator = {navigator} title = "MTF" />);
+            case 'MVolleyball':
+              return (<MenVolleyball navigator = {navigator} title = "MVolleyball" />);
+            case 'MWP':
+              return (<MenWP navigator = {navigator} title = "MWP" />);
 
             case 'WBasketball':
               return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);

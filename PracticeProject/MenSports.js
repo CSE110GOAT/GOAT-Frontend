@@ -30,6 +30,8 @@ import MenSoccer from './MSportPages/MenSoccer';
 import MenSD from './MSportPages/MenSD';
 import MenTennis from './MSportPages/MenTennis';
 import MenTF from './MSportPages/MenTF';
+import MenVolleyball from './MSportPages/MenVolleyball';
+import MenWP from './MSportPages/MenWP';
 
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
@@ -95,6 +97,18 @@ export default class MenSports extends Component {
   navTF() {
     this.props.navigator.push({
       id: 'MTF'
+    })
+  }
+
+  navVolleyball() {
+    this.props.navigator.push({
+      id: 'MVolleyball'
+    })
+  }
+
+  navWP() {
+    this.props.navigator.push({
+      id: 'MWP'
     })
   }
 
@@ -229,15 +243,24 @@ export default class MenSports extends Component {
               />
             </View>
           </TouchableHighlight>
-            <SportIcon
-              pic={require('./sport_icons/volleyball.png')}
-              sport='Volleyball'
-            />
 
+          <TouchableHighlight onPress = {this.navVolleyball.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/volleyball.png')}
+                sport='Volleyball'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWP.bind(this)}>
+            <View>
               <SportIcon
                 pic={require('./sport_icons/water_polo.png')}
                 sport='Water Polo'
               />
+            </View>
+          </TouchableHighlight>
 
           </View>
           </ScrollView>
