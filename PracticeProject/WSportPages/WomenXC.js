@@ -26,7 +26,7 @@ export default class WomenXC extends Component {
       <View style = {{flex: 1}}>
 
         <SportTabBar
-          sport = "WomenXC"
+          sport = "Cross Country"
           previous = "women"
           page = {this}
         />

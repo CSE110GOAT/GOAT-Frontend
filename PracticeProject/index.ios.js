@@ -59,6 +59,8 @@ export default class PracticeProject extends Component {
               return (<WomenBasketball navigator = {navigator} title = "WBasketball" />);
             case 'WomenXC':
               return (<WomenXC navigator = {navigator} title = "WomenXC" />);
+            case 'WFencing':
+              return (<WomenFencing navigator = {navigator} title = "WFencing" />);
           }
         }
         }
