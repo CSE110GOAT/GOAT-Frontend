@@ -38,7 +38,7 @@ export default class WomenSports extends Component {
 
   navWomenFencing() {
     this.props.navigator.push({
-      id: 'WomenFencing'
+      id: 'WFencing'
     })
   }
 

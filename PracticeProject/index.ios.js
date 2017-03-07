@@ -27,6 +27,7 @@ import MenRowing from './MSportPages/MenRowing';
 
 import WomenBasketball from './WSportPages/WomenBasketball';
 import WomenXC from './WSportPages/WomenXC';
+import WomenFencing from './WSportPages/WomenFencing';
 
 
 export default class PracticeProject extends Component {
