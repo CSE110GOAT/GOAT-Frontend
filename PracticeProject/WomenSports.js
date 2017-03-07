@@ -99,8 +99,7 @@ export default class WomenSports extends Component {
           </View>
         </View>
 
-        <View style = {{flex: 1}}>
-          <View style = {{flexDirection: 'row'}}>
+          <View style = {{flex: 1, flexDirection: 'row'}}>
             <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
               <View>
                 <SportIcon
@@ -129,7 +128,7 @@ export default class WomenSports extends Component {
             </TouchableHighlight>
           </View>
 
-          <View style = {{flexDirection: 'row'}}>
+          <View style = {{flex: 1, flexDirection: 'row'}}>
             <TouchableHighlight onPress = {this.navWomenRowing.bind(this)}>
               <View>
                 <SportIcon
@@ -158,7 +157,11 @@ export default class WomenSports extends Component {
             </TouchableHighlight>
           </View>
 
+
           <View style = {{flexDirection: 'row'}}>
+
+          <View style = {{flex: 1, flexDirection: 'row'}}>
+
             <TouchableHighlight onPress = {this.navWomenSD.bind(this)}>
               <View>
                 <SportIcon
@@ -194,7 +197,7 @@ export default class WomenSports extends Component {
             />
             <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
             </View>
-          </View>
+
         </View>
 
         <NavBar />
