@@ -14,9 +14,9 @@ import {
 import NavBar from '../NavBar';
 import SportTabBar from '../SportTabBar';
 import Slider from '../Slider.js';
-import WTFRoster from './WRosters/WTFRoster'
+import WTrackRoster from './WRosters/WTrackRoster'
 
-export default class WomenTF extends Component {
+export default class WomenTrack extends Component {
   constructor() {
     super();
   }
@@ -33,7 +33,7 @@ export default class WomenTF extends Component {
 
         <Slider
           games = "Track and Field Meets will go here"
-          roster = {<WTFRoster/>}
+          roster = {<WTrackRoster/>}
           stats = "Track and Field Stats will go here"
         />
 
@@ -42,4 +42,4 @@ export default class WomenTF extends Component {
   }
 }
 
-AppRegistry.registerComponent('WomenTF', () => WomenTF);
+AppRegistry.registerComponent('WomenTrack', () => WomenTrack);

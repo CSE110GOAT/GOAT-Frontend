@@ -13,7 +13,7 @@ import {
 
 import RosterIcon from '../../RosterIcon.js';
 
-export default class WSDRoster extends Component {
+export default class WTrackRoster extends Component {
 
   render() {
     return (
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('WSDRoster', () => WSDRoster);
+AppRegistry.registerComponent('WTrackRoster', () => WTrackRoster);

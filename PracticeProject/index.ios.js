@@ -37,9 +37,9 @@ import WomenFencing from './WSportPages/WomenFencing';
 import WomenRowing from './WSportPages/WomenRowing';
 import WomenSoccer from './WSportPages/WomenSoccer';
 import Softball from './WSportPages/Softball';
-import WomenSD from './WSportPages/WomenSD';
+import WomenSwimming from './WSportPages/WomenSwimming';
 import WomenTennis from './WSportPages/WomenTennis';
-import WomenTF from './WSportPages/WomenTF';
+import WomenTrack from './WSportPages/WomenTrack';
 import WomenVolleyball from './WSportPages/WomenVolleyball';
 import WomenWaterPolo from './WSportPages/WomenWaterPolo';
 
@@ -97,12 +97,12 @@ export default class PracticeProject extends Component {
               return (<WomenSoccer navigator = {navigator} title = "WSoccer" />);
             case 'Softball':
               return (<Softball navigator = {navigator} title = "Softball" />);
-            case 'WSD':
-              return (<WomenSD navigator = {navigator} title = "WSD" />);
+            case 'WSwimming':
+              return (<WomenSwimming navigator = {navigator} title = "WSwimming" />);
             case 'WTennis':
               return (<WomenTennis navigator = {navigator} title = "WTennis" />);
-            case 'WTF':
-              return (<WomenTF navigator = {navigator} title = "WTF" />);
+            case 'WTrack':
+              return (<WomenTrack navigator = {navigator} title = "WTrack" />);
             case 'WVolleyball':
               return (<WomenVolleyball navigator = {navigator} title = "WVolleyball" />);
             case 'WWaterPolo':

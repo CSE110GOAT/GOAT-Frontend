@@ -13,7 +13,7 @@ import {
 
 import RosterIcon from '../../RosterIcon.js';
 
-export default class WTFRoster extends Component {
+export default class WSwimmingRoster extends Component {
 
   render() {
     return (
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('WTFRoster', () => WTFRoster);
+AppRegistry.registerComponent('WSwimmingRoster', () => WSwimmingRoster);

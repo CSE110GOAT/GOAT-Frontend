@@ -14,9 +14,9 @@ import {
 import NavBar from '../NavBar';
 import SportTabBar from '../SportTabBar';
 import Slider from '../Slider.js';
-import WSDRoster from './WRosters/WSDRoster'
+import WSwimmingRoster from './WRosters/WSwimmingRoster'
 
-export default class WomenSD extends Component {
+export default class WomenSwimming extends Component {
   constructor() {
     super();
   }
@@ -32,9 +32,9 @@ export default class WomenSD extends Component {
         />
 
         <Slider
-          games = "Games will go here"
-          roster = {<WSDRoster/>}
-          stats = "Stats will go here"
+          games = "Swim Meets will go here"
+          roster = {<WSwimmingRoster/>}
+          stats = "Swim Team stats will go here"
         />
 
       </View>
@@ -42,4 +42,4 @@ export default class WomenSD extends Component {
   }
 }
 
-AppRegistry.registerComponent('WomenSD', () => WomenSD);
+AppRegistry.registerComponent('WomenSwimming', () => WomenSwimming);

@@ -24,7 +24,7 @@ const window = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class WomenSports extends Component {
-  navBasketball() {
+  navWomenBasketball() {
     this.props.navigator.push({
       id: 'WBasketball'
     })
@@ -60,9 +60,9 @@ export default class WomenSports extends Component {
     })
   }
 
-  navWomenSD() {
+  navWomenSwimming() {
     this.props.navigator.push({
-      id: 'WSD'
+      id: 'WSwimming'
     })
   }
 
@@ -72,9 +72,9 @@ export default class WomenSports extends Component {
     })
   }
 
-  navWomenTF() {
+  navWomenTrack() {
     this.props.navigator.push({
-      id: 'WTF'
+      id: 'WTrack'
     })
   }
 
@@ -119,7 +119,7 @@ export default class WomenSports extends Component {
 
 
         <View style = {{flexDirection: 'row'}}>
-          <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
+          <TouchableHighlight onPress = {this.navWomenBasketball.bind(this)}>
             <View>
               <SportIcon
                 pic={require('./sport_icons/basketball.png')}
@@ -179,7 +179,7 @@ export default class WomenSports extends Component {
 
 
         <View style = {{flexDirection: 'row'}}>
-          <TouchableHighlight onPress = {this.navWomenSD.bind(this)}>
+          <TouchableHighlight onPress = {this.navWomenSwimming.bind(this)}>
             <View>
               <SportIcon
                 pic={require('./sport_icons/swimming.png')}
@@ -197,7 +197,7 @@ export default class WomenSports extends Component {
             </View>
           </TouchableHighlight>
 
-          <TouchableHighlight onPress = {this.navWomenTF.bind(this)}>
+          <TouchableHighlight onPress = {this.navWomenTrack.bind(this)}>
             <View>
               <SportIcon
                 pic={require('./sport_icons/track.png')}
