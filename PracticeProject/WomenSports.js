@@ -72,6 +72,24 @@ export default class WomenSports extends Component {
     })
   }
 
+  navWomenTF() {
+    this.props.navigator.push({
+      id: 'WTF'
+    })
+  }
+
+  navWomenVolleyball() {
+    this.props.navigator.push({
+      id: 'WVolleyball'
+    })
+  }
+
+  navWomenWaterPolo() {
+    this.props.navigator.push({
+      id: 'WWaterPolo'
+    })
+  }
+
   navBack () {
     this.props.navigator.pop({
       id: 'explore'
@@ -99,108 +117,121 @@ export default class WomenSports extends Component {
           </View>
         </View>
 
-          <View style = {{flex: 1, flexDirection: 'row'}}>
-            <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/basketball.png')}
-                  sport='Basketball'
-                />
-              </View>
-            </TouchableHighlight>
 
-            <TouchableHighlight onPress = {this.navWomenXC.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/cross_country.png')}
-                  sport='Cross Country'
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight onPress = {this.navWomenFencing.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/fencing.png')}
-                  sport='Fencing'
-                />
-              </View>
-            </TouchableHighlight>
-          </View>
-
-          <View style = {{flex: 1, flexDirection: 'row'}}>
-            <TouchableHighlight onPress = {this.navWomenRowing.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/rowing.png')}
-                  sport='Rowing'
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight onPress = {this.navWomenSoccer.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/soccer.png')}
-                  sport='Soccer'
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight onPress = {this.navSoftball.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/softball.png')}
-                  sport='Softball'
-                />
-              </View>
-            </TouchableHighlight>
-          </View>
-
-
-          <View style = {{flexDirection: 'row'}}>
-
-          <View style = {{flex: 1, flexDirection: 'row'}}>
-
-            <TouchableHighlight onPress = {this.navWomenSD.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/swimming.png')}
-                  sport='Swimming & Diving'
-                />
-              </View>
-            </TouchableHighlight>
-
-            <TouchableHighlight onPress = {this.navWomenTennis.bind(this)}>
-              <View>
-                <SportIcon
-                  pic={require('./sport_icons/tennis.png')}
-                  sport='Tennis'
-                />
-              </View>
-            </TouchableHighlight>
-
-            <SportIcon
-              pic={require('./sport_icons/track.png')}
-              sport='Track & Field'
-            />
-          </View>
-
-          <View style = {{flexDirection: 'row'}}>
-            <SportIcon
-              pic={require('./sport_icons/volleyball.png')}
-              sport='Volleyball'
-            />
-            <SportIcon
-              pic={require('./sport_icons/water_polo.png')}
-              sport='Water Polo'
-            />
-            <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
+        <View style = {{flexDirection: 'row'}}>
+          <TouchableHighlight onPress = {this.navBasketball.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/basketball.png')}
+                sport='Basketball'
+              />
             </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenXC.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/cross_country.png')}
+                sport='Cross Country'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenFencing.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/fencing.png')}
+                sport='Fencing'
+              />
+            </View>
+          </TouchableHighlight>
+        </View>
+
+
+        <View style = {{flexDirection: 'row'}}>
+          <TouchableHighlight onPress = {this.navWomenRowing.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/rowing.png')}
+                sport='Rowing'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenSoccer.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/soccer.png')}
+                sport='Soccer'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navSoftball.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/softball.png')}
+                sport='Softball'
+              />
+            </View>
+          </TouchableHighlight>
+        </View>
+
+
+        <View style = {{flexDirection: 'row'}}>
+          <TouchableHighlight onPress = {this.navWomenSD.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/swimming.png')}
+                sport='Swimming & Diving'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenTennis.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/tennis.png')}
+                sport='Tennis'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenTF.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/track.png')}
+                sport='Track & Field'
+              />
+            </View>
+          </TouchableHighlight>
+        </View>
+
+        <View style = {{flexDirection: 'row'}}>
+          <TouchableHighlight onPress = {this.navWomenVolleyball.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/volleyball.png')}
+                sport='Volleyball'
+              />
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress = {this.navWomenWaterPolo.bind(this)}>
+            <View>
+              <SportIcon
+                pic={require('./sport_icons/water_polo.png')}
+                sport='Water Polo'
+              />
+              </View>
+            </TouchableHighlight>
+          <View style={[styles.sport_icon, {borderBottomWidth: 0}]}>
+          </View>
 
         </View>
 
         <NavBar />
+
       </View>
     );
   }
