@@ -142,8 +142,8 @@ export default class MenSports extends Component {
         </View>
 
 
-      <ScrollView>
-          <View style={{flex: 1, flexDirection: 'row'}}>
+
+        <View style={{flexDirection: 'row'}}>
 
           <TouchableHighlight onPress = {this.navBaseball.bind(this)}>
             <View>
@@ -174,7 +174,7 @@ export default class MenSports extends Component {
 
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row'}}>
           <TouchableHighlight onPress = {this.navFencing.bind(this)}>
             <View>
               <SportIcon
@@ -233,7 +233,7 @@ export default class MenSports extends Component {
 
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row'}}>
 
           <TouchableHighlight onPress = {this.navTF.bind(this)}>
             <View>
@@ -263,7 +263,6 @@ export default class MenSports extends Component {
           </TouchableHighlight>
 
           </View>
-          </ScrollView>
         <NavBar />
       </View>
 
