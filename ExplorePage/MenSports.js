@@ -127,13 +127,13 @@ export default class MenSports extends Component {
       </View>
 
       <View style = {styles.topBar}>
-      <TouchableHighlight onPress = {this.navBack.bind(this)}>
-        <Image
-          source = {require('./Back-50.png')}
-          style = {styles.pic}
+        <TouchableHighlight onPress = {this.navBack.bind(this)} underlayColor = 'white'>
+          <Image
+            source = {require('./Back-50.png')}
+            style = {styles.pic}
 
-        />
-      </TouchableHighlight>
+          />
+        </TouchableHighlight>
 
           <View style = {styles.banner}>
             <Text style = {styles.title}> MEN'S SPORTS </Text>
@@ -302,8 +302,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: window.width,
     borderWidth: 0.5,
-    borderColor: 'green',
-
+    borderColor: 'gainsboro',
+    backgroundColor: 'white'
   },
 
   title: {

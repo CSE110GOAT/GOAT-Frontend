@@ -105,7 +105,10 @@ export default class WomenSports extends Component {
         </View>
 
         <View style = {styles.topBar}>
-          <TouchableHighlight onPress = {this.navBack.bind(this)}>
+          <TouchableHighlight
+            onPress = {this.navBack.bind(this)}
+            underlayColor = 'white'
+          >
             <Image
               source = {require('./Back-50.png')}
               style = {styles.pic}
@@ -113,7 +116,7 @@ export default class WomenSports extends Component {
           </TouchableHighlight>
 
           <View style = {styles.banner}>
-            <Text style = {styles.title}> WOMENS SPORTS </Text>
+            <Text style = {styles.title}> WOMEN'S SPORTS </Text>
           </View>
         </View>
 
@@ -268,6 +271,7 @@ const styles = StyleSheet.create({
     width: window.width,
     borderWidth: 0.5,
     borderColor: 'gainsboro',
+    backgroundColor: 'white'
   },
 
   title: {

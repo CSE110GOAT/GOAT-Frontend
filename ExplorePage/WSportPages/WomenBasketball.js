@@ -26,7 +26,7 @@ export default class WomenBasketball extends Component {
       <View style = {{flex:1}}>
 
         <SportTabBar
-          sport = "W Basketball"
+          sport = "Basketball"
           previous = "women"
           page = {this}
         />

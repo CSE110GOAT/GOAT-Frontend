@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   topBar: {
     flexDirection: 'row',
     width: window.width,
+    backgroundColor: 'white'
   }
 });
 
